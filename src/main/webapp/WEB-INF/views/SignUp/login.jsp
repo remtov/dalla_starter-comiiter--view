@@ -12,26 +12,31 @@
 h1 {
 	margin-top: 50px;
 }
-
-
 </style>
 
 </head>
 <body>
 
-	<div class="find-container">
-		<div class="container" id="find_container--800">
+	<div class="find-container" style="background-color:red;">
+		<div class="container" style="background-color:blue;" id="find_container--800">
 			<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
 			<c:choose>
 				<c:when test="${not empty sessionScope.userLoginInfo}">
-					<h2>로그인 성공</h2>
-        이름 : ${sessionScope.userLoginInfo.signupId}
- 
-        이메일 : <c:out value="${sessionScope.userLoginInfo.signupEmail}" />
-					<button type="button" onclick="logout()">로그아웃</button>
-					<button type="button" onclick="location.href='/url/SignUp:MyPage'">마이페이지</button>
+					<div style="background-color:yellow;">
+						<h1>
+							${sessionScope.userLoginInfo.signupId}님 반갑습니다. <small>로그인
+								된 상태입니다.</small>
+						</h1>
+
+						이메일 :
+						<c:out value="${sessionScope.userLoginInfo.signupEmail}" />
+						<button class="form-control" type="button" onclick="logout()">로그아웃</button>
+						<button class="form-control" type="button" onclick="location.href='/url/SignUp:MyPage'">마이페이지</button>
+					</div>
 				</c:when>
 				<c:otherwise>
+
+
 					<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
 
 
@@ -46,8 +51,8 @@ h1 {
 						<div class="form-group">
 							<label for="signupId" class="col-sm-2 control-label">아이디</label>
 							<div class="col-sm-10">
-								<input type="text" onkeypress = "enter(event)" id="signupId" data-vali="2"
-									class="form-control" placeholder="아이디를 입력하세요.">
+								<input type="text" onkeypress="enter(event)" id="signupId"
+									data-vali="2" class="form-control" placeholder="아이디를 입력하세요.">
 							</div>
 						</div>
 
@@ -56,8 +61,9 @@ h1 {
 							<label for="signupPassword" class="col-sm-2 control-label">비밀번호</label>
 
 							<div class="col-sm-10">
-								<input class="form-control" onkeypress = "enter(event)" type="password" id="signupPassword"
-									data-vali="2" placeholder="비밀번호를 입력하세요.">
+								<input class="form-control" onkeypress="enter(event)"
+									type="password" id="signupPassword" data-vali="2"
+									placeholder="비밀번호를 입력하세요.">
 							</div>
 						</div>
 
@@ -96,12 +102,12 @@ h1 {
 
 
 	<script>
-	function enter(ent){
-		var code = ent.which?ent.which:event.keyCode;
-		if(code==13){
-			loging()
+		function enter(ent) {
+			var code = ent.which ? ent.which : event.keyCode;
+			if (code == 13) {
+				loging()
+			}
 		}
-	}
 		function loging() {
 			var signupId = document.querySelector('#signupId').value
 			var signupPassword = document.querySelector('#signupPassword').value

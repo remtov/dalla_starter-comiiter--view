@@ -26,12 +26,12 @@ body {
 #session-less>img {
 	width: 50px;
 }
-.view-container{
+
+.view-container {
 	width: 100%;
 	background-color: #f6f6f6;
-
-	
 }
+
 .gray-container {
 	background-color: #f6f6f6;
 	position: relative;
@@ -39,6 +39,20 @@ body {
 	cellspacing: 0px;
 	width: 100%;
 	padding-top: 80px;
+	margin: auto;
+	z-index: 1;
+	overflow: visible;
+	border: 0px;
+	cellpadding: 0px;
+}
+
+.product-container {
+	background-color: #f6f6f6;
+	position: relative;
+	cellpadding: 0px;
+	cellspacing: 0px;
+	width: 100%;
+	padding-top: 10px;
 	margin: auto;
 	z-index: 1;
 	overflow: visible;
@@ -75,6 +89,88 @@ body {
 	font-size: 0.8em;
 }
 /* login같은 간이페이지 공통css */
+
+/* 관리자페이지 공통활용 */
+.admin-right_link-span {
+	float: right;
+	margin-top: -30px;
+}
+
+.row>.col-md-2 {
+	float: left;
+	background-color: white;
+}
+
+.row>.col-md-2>div {
+	margin-top: 15px;
+	width: 100%;
+	font-size: 1.2em
+}
+
+#admin-left_button-active {
+	background-color: #e6e6e6;
+}
+
+.admin-left_ad {
+	margin-top: 15px;
+}
+
+.admin-left_download {
+	margin-top: 15px;
+}
+
+.admin-left_download>button {
+	font-size: 1em;
+}
+
+.admin-left_download>button>img {
+	width: 30px;
+	heigth: auto;
+}
+
+.col-md-10 {
+	float: right;
+	background-color: white;
+}
+
+.admi-main_search-line {
+	margin-bottom: 20px;
+}
+
+.admin-right_table-member {
+	margin-top: 20px;
+	width: 100%;
+	overflow:scroll;
+	border: 1px solid #e6e6e6;
+}
+
+.admin-main_grid-div--h400 {
+	border: 1px solid gray;
+	height: 400px;
+	margin-top: 20px;
+}
+
+.admin-main_grid-div--h300 {
+	border: 1px solid gray;
+	height: 300px;
+	margin-top: 20px;
+}
+
+.admin-right_table-member>table {
+	width: 1200px;
+	background-color: white;
+}
+
+.admin-main_grid-div--h300>div {
+	height: 160px;
+	margin-top: 20px;
+}
+
+.admin-main_grid-div--h300>div>img {
+	margin-top: -35px
+}
+
+/* 관리자페이지 공통활용 */
 
 /* <!-- 롤오버드랍다운 css & script --> */
 .zeta-menu-bar {

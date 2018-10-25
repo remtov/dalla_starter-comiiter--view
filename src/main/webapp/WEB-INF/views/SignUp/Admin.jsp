@@ -7,108 +7,6 @@
 <meta charset="UTF-8" />
 <title>admin 관리자 페이지</title>
 </head>
-<style>
-blockquote {
-	margin-bottom: 100px;
-}
-
-.admin-right_link-span {
-	float: right;
-	margin-top: -30px;
-}
-
-.row>.col-md-2 {
-	float: left;
-	background-color: white;
-}
-
-.row>.col-md-2>div {
-	margin-top: 15px;
-	width: 100%;
-	font-size: 1.2em
-}
-
-#admin-left_button-active {
-	background-color: #e6e6e6;
-}
-
-.admin-left_ad {
-	margin-top: 15px;
-}
-
-.admin-left_download {
-	margin-top: 15px;
-}
-
-.admin-left_download>button {
-	font-size: 1em;
-}
-
-.admin-left_download>button>img {
-	width: 30px;
-	heigth: auto;
-}
-
-.admin-left_remover--gray {
-	background-color: white;
-	width: auto;
-	height: 500px;
-	position: relative;
-	margin-bottom: -300px;
-}
-
-.col-md-10 {
-	float: right;
-	background-color: white;
-}
-
-.admi-main_search-line {
-	margin-bottom: 20px;
-}
-
-.admin-right_table-member {
-	margin-top: 20px;
-	height: 400px;
-	width: 100%;
-	overflow: auto;
-	border: 1px solid #e6e6e6;
-	overflow: auto;
-	height: 400px;
-}
-
-.admin-main_grid-div--h400 {
-	border: 1px solid gray;
-	height: 400px;
-	margin-top: 20px;
-}
-
-.admin-main_grid-div--h300 {
-	border: 1px solid gray;
-	height: 300px;
-	margin-top: 20px;
-}
-
-.admin-right_table-member>table {
-	width: 1200px;
-	background-color: white;
-}
-
-.admin-main_grid-div--h300>div {
-	height: 160px;
-	margin-top: 20px;
-}
-
-.admin-main_grid-div--h300>div>img {
-	margin-top: -35px
-}
-
-#admin-footer_remove {
-	background-color: red;
-	height: 300px;
-	position: relative;
-	margin-bottom: -800x;
-}
-</style>
 
 <body>
 	<div class="gray-container">
@@ -194,7 +92,7 @@ blockquote {
 									</button>
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="#">판매예정</a></li>
-										<li><a href="#">판매중물</a></li>
+										<li><a href="#">판매중</a></li>
 										<li><a href="#">판매완료</a></li>
 										<li><a href="#">배송중</a></li>
 										<li><a href="#">반품</a></li>
@@ -230,7 +128,7 @@ blockquote {
 												의견을 듣고 그리고 우리는 집행 기관이 고객에게 가치를 제공하는 판매자를위한 도전이었다 알고 있습니다. 즉시
 												시작하여 상장 직후에 다시 markdown 이벤트를 작성할 수 있습니다. 우리가 휴일로 이사 할 때, 우리의
 												가장 큰 우선 순위는 쉽고 성공적인 판매 시즌을 보장하는 것입니다. 우리는 2019 년에이 기능의 변경이
-												필요한지 계속 평가할 것입니다. 항상 그렇듯이 Dallae에서 판매 해 주셔서 감사합니다. 봉
+												필요한지 계속 평가할 것입니다. 항상 그렇듯이 Dallae에서 판매 해 주셔서 감사합니다. 달래
 												(Dallae) 팀</p>
 										</div>
 										<div class="modal-footer">
@@ -287,17 +185,17 @@ blockquote {
 
 								<div class="col-md-3">
 									<select class="form-control input" id="serch">
-										<option value="signupNum">>선택하세요</option>
-										<option value="signupNum">>회원 번호</option>
-										<option value="signupName">>회원 이름</option>
-										<option value=signupId>>회원id</option>
-										<option value="signupPassword">>회원 비밀번호</option>
-										<option value="signupEmail">>회원 email</option>
-										<option value="signupNickName">>회원 별명</option>
-										<option value="signupDate">>회원가입 일자</option>
-										<option value="signupConcern">>회원 관심사</option>
-										<option value="signupPersonallity">>회원 주민등록번호</option>
-										<option value="signupPhone">>회원폰번호</option>
+										<option value="signupNum">선택하세요</option>
+										<option value="signupNum">회원 번호</option>
+										<option value="signupName">회원 이름</option>
+										<option value=signupId>회원id</option>
+										<option value="signupPassword">회원 비밀번호</option>
+										<option value="signupEmail">회원 email</option>
+										<option value="signupNickName">회원 별명</option>
+										<option value="signupDate">회원가입 일자</option>
+										<option value="signupConcern">회원 관심사</option>
+										<option value="signupPersonallity">회원 주민등록번호</option>
+										<option value="signupPhone">회원폰번호</option>
 									</select>
 								</div>
 
@@ -348,7 +246,7 @@ blockquote {
 
 								<img src="http://www.koitt.com/img/m11_img01.png">
 							</div>
-							<div id="admin-footer_remove">dsfdsf</div>
+							
 
 
 						</div>

@@ -127,7 +127,7 @@ height:100px;
 					<td class="col-md-5">
 
 						<button class="btn btn-danger btn-lg btn-block" type="button"
-							onclick="Delete()">주의! 삭제</button>
+							onclick="Delete()">주의! 데이터가 삭제됩니다.</button>
 
 					</td>
 
