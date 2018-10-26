@@ -81,9 +81,9 @@ window.addEventListener('load',function(){
 							<div class="btn-group-vertical" role="group" aria-label="...">
 
 								<button id="admin-left_button-active" type="button"
-									class="btn btn-default btn-lg btn-block">경매관리</button>
+									class="btn btn-default btn-lg btn-block" onclick="location.href='/url/bproduct:list'">경매관리</button>
 
-								<button type="button" class="btn btn-default btn-lg btn-block">경매등록</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" onclick="location.href='/url/bproduct:insert'">경매등록</button>
 								<button type="button" class="btn btn-default btn-lg btn-block">test1</button>
 								<button type="button" class="btn btn-default btn-lg btn-block">test2</button>
 								<button type="button" class="btn btn-default btn-lg btn-block">test3</button>
@@ -179,95 +179,57 @@ window.addEventListener('load',function(){
 
 						<div class="col-md-10">
 
-							<!-- 검색창영역 -->
-							<h3>
-								경매관리 <small>원하시는 경매정보를 검색하시고 클릭하여 편집하세요.</small>
-							</h3>
-							<hr>
-
-							<div class="admi-main_search-line">
-
-
-								<div class="col-md-3">
-									<select class="form-control input" id="serch">
-										<option value="productNumber">선택하세요</option>
-										<option value="productNumber">제품 번호</option>
-										<option value="productName">제품명</option>
-										<option value="productCategory">제품 분류</option>
-										<option value="productLowestPrice">제품 최저가</option>
-										<option value="productHopefulPrice">제품 희망가</option>
-										<option value="productBrand">제품 브랜드</option>
-										<option value="productCondition">제품 상태</option>
-
-									</select>
-								</div>
-
-								<div class="col-md-7">
-									<input class="form-control input" type="text" id="serchEx">
-								</div>
-
-
-								<div class="col-md-2">
-									<button class="btn btn-default btn btn-block" type="button"
-										onclick="search()">검색</button>
-								</div>
-							</div>
-
-							<!-- 검색창영역 -->
-							&nbsp;
+					
 
 
 							<div class="admin-right_table-member">
 
-								<h3>제품 등록 란</h3>
-
-								<h1 class="page-header">제품 수정</h1>
-								<h2 class="sub-header">바로 입력하고 수정하면됨</h2>
+								<h3>매물 등록</h3>
 
 								<form id="myform" enctype="multipart/form-data" method="POST">
-									<table border="1" class="table table-hover">
+									<table class="table table-hover">
 
 										<tr>
 											<td align="center">제품 명</td>
-											<td align="center"><input type="text" id="productName"
+											<td align="center"><input class="form-control" type="text" id="productName"
 												name="productName" placeholder="제품명을 입력해 주세요" data-vc="2,30"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 코드</td>
-											<td align="center"><input type="text" id="productCode"
+											<td align="center"><input class="form-control" type="text" id="productCode"
 												name="productCode" placeholder="제품코드" data-vc="3,10"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 수량</td>
-											<td align="center"><input type="text"
+											<td align="center"><input class="form-control" type="text"
 												id="productQuantity" name="productQuantity"
 												placeholder="판매 수량 (숫자)" data-vc="1,1000" required></td>
 										</tr>
 										<tr>
 											<td align="center">제품 최저가</td>
-											<td align="center"><input type="text"
+											<td align="center"><input class="form-control" type="text"
 												id="productLowestPrice" name="productLowestPrice"
 												placeholder="제품의 최저가" data-vc="1,1000000000"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 희망가</td>
-											<td align="center"><input type="text"
+											<td align="center"><input class="form-control" type="text"
 												id="productHopefulPrice" name="productHopefulPrice"
 												placeholder="제품 희망가(즉시 구매가)" data-vc="1,1000000000"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 설명</td>
-											<td align="center"><input type="text" id="productDesc"
+											<td align="center"><input class="form-control" type="text" id="productDesc"
 												name="productDesc" placeholder="제품의 설명" data-vc="1,300"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 브랜드</td>
-											<td align="center"><input type="text" id="productBrand"
+											<td align="center"><input class="form-control" type="text" id="productBrand"
 												name="productBrand" placeholder="제품명의 브랜드" data-vc="1,20"></td>
 										</tr>
 										<tr>
 											<td align="center">제품 상태</td>
-											<td align="center"><input type="text"
+											<td align="center"><input class="form-control" type="text"
 												id="productCondition" name="productCondition"
 												placeholder="제품의 상태(자세히)" data-vc="1,30"></td>
 										</tr>
@@ -375,23 +337,46 @@ window.addEventListener('load',function(){
 			<c:otherwise>
 
 
-				<div class="find-container">
-					<div id="session-less">
+					<head>
+<style>
+.row>p {
+	margin-bottom: 150px;
+}
+</style>
+				</head>
+				<body>
+					<div class="container">
+						<div class="container" id="session-less">
+							<div class="row">
 
-						<img src="/img/icon_login.png">
+								<img src="/img/icon_login.png">
 
-						<h3>
-							<a href="/url/SignUp:login">판매자 ID로 <b>로그인</b></a> 부탁드립니다. <small><a
-								href="/">| <b>홈으로</b></a> <a href="/">| <b>판매자 인증 받으러 가기</b></a></small>
-						</h3>
-						<p>
-							권한 에러 : 페이지에 대한 <b>권한</b>이 없으십니다.
-						</p>
+								<h1>
+									<a href="/url/SignUp:login">테스트중, ID "판매자" 비밀번호"123" 으로 <b>로그인</b></a>
+									<small>하면 판매자 테스트가 가능합니다.</small>
+								</h1>
 
+								<p>
+									<b>권한 에러</b> : 페이지에 대한 <b>권한</b>이 없으십니다.<br>
+
+								</p>
+
+								<div class="col-md-6">
+									<button class="btn btn-default btn-lg btn-block" type="button"
+										onclick="history.back()">뒤로가기</button>
+								</div>
+
+								<div class="col-md-6">
+									<button class="btn btn-primary btn-lg btn-block" type="button"
+										onclick="location.href='#'">판매자 인증하러 가기</button>
+								</div>
+
+
+							</div>
+						</div>
 					</div>
-				</div>
 
-
+				</body>
 			</c:otherwise>
 
 		</c:choose>
