@@ -29,7 +29,7 @@ h1 {
 
 
 				<h1>비밀번호 찾기</h1>
-				<p>가입할 때 적으셨던 아이디, 성함, 전화번호를 입력하여 주십시오.<a onclick="back()">전 단계로 가기</a></p>
+				<p>가입할 때 적으셨던 아이디, 성함, 전화번호를 입력하여 주십시오. <a onclick="history.back()">뒤로가기</a></p>
 			</div>
 
 
@@ -80,9 +80,7 @@ h1 {
 
 
 	<script>
-		function back() {
-			location.href = "/url/SignUp:login";
-		}
+		
 		function findpass() {
 			var signupId = document.querySelector('#signupId').value
 			var signupName = document.querySelector('#signupName').value

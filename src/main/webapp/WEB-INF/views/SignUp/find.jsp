@@ -28,7 +28,9 @@ h1 {
 
 				<h1>아이디 찾기</h1>
 				<p>
-					가입할 때 적으셨던 성함과 전화번호를 입력하여 주십시오.<a onclick="back()">전 단계로 가기</a>
+					가입할 때 적으셨던 성함과 전화번호를 입력하여 주십시오. <a onclick="history.back()">뒤로가기</a> 
+
+
 				</p>
 			</div>
 
@@ -66,9 +68,7 @@ h1 {
 	</div>
 
 	<script>
-		function back() {
-			location.href = "/url/SignUp:login";
-		}
+		
 		/* 아이디찾기를 눌렀을때 실행되는구문 */
 		function findid() {
 			var signupName = document.querySelector('#signupName').value

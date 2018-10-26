@@ -12,32 +12,68 @@
 h1 {
 	margin-top: 50px;
 }
+
+.row>p {
+	margin-bottom: 100px;
+}
 </style>
 
 </head>
 <body>
 
-	<div class="find-container" style="background-color:red;">
-		<div class="container" style="background-color:blue;" id="find_container--800">
-			<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
+
+
+	<div class="find-container">
+		<div class="container" id="find_container--800">
+
 			<c:choose>
 				<c:when test="${not empty sessionScope.userLoginInfo}">
-					<div style="background-color:yellow;">
-						<h1>
-							${sessionScope.userLoginInfo.signupId}님 반갑습니다. <small>로그인
-								된 상태입니다.</small>
-						</h1>
+					<!-- 로그인된상태인 사람이 이 페이지를 열었을때 보여지는 영역-->
+					<head>
+<style>
+h1 {
+	margin-top: 150px;
+}
+</style>
+					</head>
 
-						이메일 :
-						<c:out value="${sessionScope.userLoginInfo.signupEmail}" />
-						<button class="form-control" type="button" onclick="logout()">로그아웃</button>
-						<button class="form-control" type="button" onclick="location.href='/url/SignUp:MyPage'">마이페이지</button>
-					</div>
+
+					<body>
+						<div class="row">
+
+							<h1>
+								"<b>${sessionScope.userLoginInfo.signupId}</b>"님 반갑습니다.
+							</h1>
+							<p>
+								로그인 된 상태입니다. (이메일 : " <b><c:out
+										value="${sessionScope.userLoginInfo.signupEmail}" /></b>") <a
+									onclick="history.back()">뒤로가기</a>
+							</p>
+							<div class="col-md-4">
+								<button class="btn btn-default btn-lg btn-block" type="button"
+									onclick="logout()">로그아웃</button>
+							</div>
+							<div class="col-md-4">
+								<button class="btn btn-default btn-lg btn-block" type="button"
+									onclick="location.href='/url/SignUp:MyPage'">마이페이지</button>
+							</div>
+							<div class="col-md-4">
+								<button class="btn btn-primary btn-lg btn-block" type="button"
+									onclick="location.href='#'">판매자 인증하러 가기</button>
+							</div>
+
+
+
+
+						</div>
+
+					</body>
+					<!-- 로그인된상태인 사람이 이 페이지를 열었을때 보여지는 영역-->
 				</c:when>
 				<c:otherwise>
 
 
-					<!-- 로그인했을때 내용을 보여지게 하려했는데 지금은 네비게이션에 넣었다. -->
+
 
 
 					<div>

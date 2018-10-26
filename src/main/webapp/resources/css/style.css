@@ -19,11 +19,11 @@ body {
 #session-less {
 	padding: 100px 0px 200px 0px;
 	text-align: center;
-	width: 100%;
+	width: 600px;
 	background-color: #f6f6f6;
 }
 
-#session-less>img {
+#session-less img {
 	width: 50px;
 }
 

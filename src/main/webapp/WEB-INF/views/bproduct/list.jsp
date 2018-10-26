@@ -99,8 +99,8 @@ window.addEventListener('load',function(){
 										<li><a href="#">test1</a></li>
 										<li><a href="#">test2</a></li>
 										<li><a href="#">test3</a></li>
-										
-										
+
+
 
 									</ul>
 								</div>
@@ -296,23 +296,42 @@ window.addEventListener('load',function(){
 
 
 			<c:otherwise>
+				<head>
+<style>
+.row>p {
+	margin-bottom: 150px;
+}
+</style>
+				</head>
+				<body>
+					<div class="container">
+						<div class="container" id="session-less">
+							<div class="row">
 
+								<img src="/img/icon_login.png">
 
-				<div class="find-container">
-					<div id="session-less">
+								<h1>
+									<a href="/url/SignUp:login">판매자 ID로 <b>로그인</b></a> <small>부탁드립니다.</small>
+								</h1>
 
-						<img src="/img/icon_login.png">
+								<p>
+									<b>권한 에러</b> : 페이지에 대한 <b>권한</b>이 없으십니다.
+								</p>
+								<div class="col-md-6">
+									<button class="btn btn-default btn-lg btn-block" type="button"
+										onclick="history.back()">뒤로가기</button>
+								</div>
 
-						<h3>
-							<a href="/url/SignUp:login">판매자 ID로 <b>로그인</b></a> 부탁드립니다. <small><a
-								href="/">| <b>홈으로</b></a> <a href="/">| <b>판매자 인증 받으러 가기</b></a></small>
-						</h3>
-						<p>
-							권한 에러 : 페이지에 대한 <b>권한</b>이 없으십니다.
-						</p>
-
+								<div class="col-md-6">
+									<button class="btn btn-primary btn-lg btn-block" type="button"
+										onclick="location.href='#'">판매자 인증하러 가기</button>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
+
+				</body>
+
 
 
 			</c:otherwise>
