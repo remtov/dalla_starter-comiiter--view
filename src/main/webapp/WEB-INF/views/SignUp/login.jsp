@@ -81,7 +81,11 @@ h1 {
 						<p>
 							아직 가입하지 않으셨습니까? <a onclick="signUp()">회원가입</a>
 						</p>
-						<br>
+
+						<p style="color:red;">
+							테스트1 - 아이디:관리자,비밀번호:123 _ 로그인하여 관리자 테스트를 할 수 있습니다.<br> 테스트2
+							- 아이디:판매자,비밀번호:123 _ 로그인하여 판매자 테스트를 할 수 있습니다.
+						</p>
 					</div>
 					<form id="login" class="form-horizontal">
 						<div class="form-group">

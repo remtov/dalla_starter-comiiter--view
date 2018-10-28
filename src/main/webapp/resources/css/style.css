@@ -67,6 +67,15 @@ body {
 	height: 500px;
 }
 
+.admin-container_no-session {
+	width: 100%;
+	background-color: #f6f6f6;
+	height: 500px;
+	/* position:fixed; */
+	top:100px;
+	
+}
+
 .my-page_container {
 	width: 100%;
 	background-color: #f6f6f6;
@@ -140,7 +149,7 @@ body {
 .admin-right_table-member {
 	margin-top: 20px;
 	width: 100%;
-	overflow:scroll;
+	overflow: scroll;
 	/* border: 1px solid #e6e6e6; */
 }
 
@@ -379,8 +388,8 @@ body {
 }
 
 /* 경로css 실험 */
-@media ( max-width :800px ) {
-	/* 가로 1200px이하일경우 스마트폰 레이아웃으로 변경 */
+/* @media ( max-width :800px ) {
+	가로 1200px이하일경우 스마트폰 레이아웃으로 변경
 	#container {
 		width: auto;
 	}
@@ -392,7 +401,7 @@ body {
 		clear: both;
 	}
 
-	/* 클래스선택자 */
+	클래스선택자
 	.contentLeft {
 		width: 100%;
 		float: none;
@@ -422,7 +431,7 @@ body {
 }
 
 @media ( min-width :800px) and ( max-width:1200px ) {
-	/* 가로 1200px이하일경우 스마트폰 레이아웃으로 변경 */
+	가로 1200px이하일경우 스마트폰 레이아웃으로 변경
 	#container {
 		width: auto;
 	}
@@ -434,7 +443,7 @@ body {
 		clear: both;
 	}
 
-	/* 클래스선택자 */
+	클래스선택자
 	.contentLeft {
 		width: 48%;
 	}
@@ -459,4 +468,4 @@ body {
 	#footerInner {
 		width: auto;
 	}
-}
+} */

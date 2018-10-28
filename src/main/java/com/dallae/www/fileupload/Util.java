@@ -11,7 +11,7 @@ package com.dallae.www.fileupload;
 
 	public class Util {
 
-		public static final String uploadPath = "C:\\Users\\koitt03-A\\git\\dallae-khg-test03\\src\\main\\webapp\\resources\\img";
+		public static final String uploadPath = "C:\\Users\\hyunGoo\\git\\dallae-khg-test03\\src\\main\\webapp\\resources\\img\\product";
 
 		public static Map<String, Object> saveFile(MultipartHttpServletRequest request){
 			Map<String, Object> map = new HashMap<String, Object>();

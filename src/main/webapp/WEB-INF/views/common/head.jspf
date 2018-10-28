@@ -25,6 +25,8 @@
 
 <!-- 파비콘 -->
 <link rel="icon" href="/resources/img/favi.png">
+
+
 <!-- 부트스트랩 -->
 <link href="<%=rootPath%>/resources/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -34,6 +36,8 @@
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	
 <script src="<%=rootPath%>/resources/js/bootstrap.min.js"></script>
 
 
@@ -127,9 +131,8 @@
 
 							<ul class="nav navbar-nav navbar-right">
 								<!-- <li><a href="/">오늘의 추천거래</a></li> -->
-								<li><a href="/url/bproduct:list">경매 올리기</a></li>
+								<li><a href="/url/bproduct:insert">경매 등록</a></li>
 								<!-- <li><a href="#">도움말 및 문의</a></li> -->
-
 
 
 
@@ -138,16 +141,11 @@
 										나의 달래<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="/url/bproduct:list">경매관리</a></li>
-										<li><a href="/url/bproduct:insert">경매등록</a></li>
-
-										<li class="divider"></li>
-										<li><a href="#">test1</a></li>
-										<li><a href="#">test2</a></li>
-										<li><a href="#">test3</a></li>
+										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
+										<%@ include
+											file="/WEB-INF/views/common/my-dallae_left-menu.jspf"%>
+										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
 									</ul></li>
-
-
 
 
 
@@ -170,7 +168,7 @@
 
 										<li><a onclick="logout()">로그아웃</a></li>
 										<!-- 관리자에 해당하는 내용분기점 -->
-										<c:if test="${userLoginInfo.signupId =='고영찬'}">
+										<c:if test="${userLoginInfo.signupId =='관리자'}">
 											<li><a href="/url/SignUp:Admin">관리자 페이지</a></li>
 										</c:if>
 										<!-- 관리자에 해당하는 내용분기점 -->
@@ -211,32 +209,10 @@
 										나의 달래<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="/url/bproduct:list">경매관리</a></li>
-										<li><a href="/url/bproduct:insert">경매등록</a></li>
-
-										<li class="divider"></li>
-										<li><a href="#">test1</a></li>
-										<li><a href="#">test2</a></li>
-										<li><a href="#">test3</a></li>
-										<!-- <li><a href="#">구매내역</a></li>
-										<li><a href="#">저장된컨텐츠</a></li>
-										<li><a href="#">저장된판매자</a></li>
-										<li><a href="#">입찰</a></li>
-										<li><a href="#">판매</a></li>
-경매등록
-경매관리
-달래톡목록
-경매 광고하기
-경매/입찰내역
-달래페이 경매/정산
-전문상점 전환
-오류 및 기능제안
-탈퇴	
- -->
-
-
-
-									</ul></li>
+										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
+										<%@ include
+											file="/WEB-INF/views/common/my-dallae_left-menu.jspf"%>
+										<!-- 프로덕트 left 메뉴와 공통활용한다. -->									</ul></li>
 
 								<li><a href="/url/SignUp:login">로그인</a></li>
 

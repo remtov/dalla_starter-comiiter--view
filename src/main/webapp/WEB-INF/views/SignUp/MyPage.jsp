@@ -235,7 +235,7 @@ tr td .form-group div #myform {
 						<div class="row" id="my-page_row2">
 							<!-- 프로필판넬 -->
 							<div class="col-md-3">
-								<img src="/img/icon_profile02.png">
+								<img src="/img/icon_profile.png">
 								<!-- 프로필사진 -->
 								<div>
 									<button>
@@ -388,7 +388,7 @@ tr td .form-group div #myform {
 
 					<div class="gray-container">
 						<div class="find-container">
-							<div id="session-less">
+							<div id="session-less" style="margin:auto;">
 								<img src="/img/icon_login.png">
 								<h3>
 									<a href="/url/SignUp:login"><b>로그인</b></a> 부탁드립니다. <small><a

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+	pageEncoding="UTF-8"%>
+	
 <script>
 function valicheck(){
 	var vcs = document.querySelectorAll('*[data-vc]');
@@ -28,13 +28,8 @@ function valicheck(){
 
 </script>
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="/resources/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<script src="/resources/bootstrap/docs/assets/js/vendor/holder.min.js"></script>
 
-	<script
-		src="/resources/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>
