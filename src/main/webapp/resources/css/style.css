@@ -72,8 +72,7 @@ body {
 	background-color: #f6f6f6;
 	height: 500px;
 	/* position:fixed; */
-	top:100px;
-	
+	top: 100px;
 }
 
 .my-page_container {
@@ -225,7 +224,32 @@ body {
 	width: 180px;
 }
 
-.zeta-menu ul li {
+#left_img-profile--div {
+	padding-top: 10px;
+	width: 100px;
+	text-align: center;
+	/* margin: auto; */
+	width: 100px;
+	width: 100px;
+	width: 100px;
+}
+
+#left_img-profile--div>img {
+	width: 100%;
+	height: auto;
+	/* margin: auto; */
+}
+
+#left_img-profile--div>div {
+	margin-top: 10px;
+}
+
+.common_title-line {
+	width: 100%;
+	
+}
+
+.zeta-menu ul li {life
 	float: none;
 }
 

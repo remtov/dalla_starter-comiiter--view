@@ -4,25 +4,6 @@
 
 <head>
 <style>
-#left_img-profile--div {
-	padding-top: 20px;
-	width: 100px;
-	text-align: center;
-	margin: auto;
-	width: 100px;
-	width: 100px;
-}
-
-#left_img-profile--div>img {
-	width: 100%;
-	height: auto;
-	margin: auto;
-}
-
-#left_img-profile--div>div {
-	margin-top: 10px;
-}
-
 div {
 	/* border: 3px solid red; */
 	
@@ -36,44 +17,46 @@ div {
 
 
 
-	<div>
+	<div style="border: 1px solid #f6f6f6;">
 		<c:set var="userid" value="${userLoginInfo.signupId}"></c:set>
 		<c:choose>
 			<c:when test="${not empty sessionScope.userLoginInfo}">
 				<!-- 세션이있는 모든사람들에게 보이는 메뉴 -->
-				<div id="left_img-profile--div">
+		
+				<div class="container">
+					<div id="left_img-profile--div">
+						<img src="/img/icon_profile.png">
 
-					<img src="/img/icon_profile.png">
-					<!-- Single button -->
-					<div class="btn-group">
+						<!-- 버튼 -->
+						<div class="btn-group">
 
-						<button type="button" class="btn btn-default dropdown-toggle"
-							data-toggle="dropdown" aria-expanded="false">
-							<b>${sessionScope.userLoginInfo.signupName}</b>님 <span
-								class="caret"></span>
-						</button>
+							<button type="button" class="btn btn-default dropdown-toggle"
+								data-toggle="dropdown" aria-expanded="false">
+								<b>${sessionScope.userLoginInfo.signupName}</b>님 <span
+									class="caret"></span>
+							</button>
 
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="/url/SignUp:MyPage">계정설정</a></li>
+								<li><a onclick="logout()">로그아웃</a></li>
+								<!-- 관리자에 해당하는 내용분기점 -->
+								<c:if test="${userLoginInfo.signupId =='관리자'}">
+									<li class="divider"></li>
+									<li><a href="/url/SignUp:Admin">관리자 페이지</a></li>
+								</c:if>
+								<!-- 관리자에 해당하는 내용분기점 -->
 
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="/url/SignUp:MyPage">계정설정</a></li>
-							<li><a onclick="logout()">로그아웃</a></li>
-							<!-- 관리자에 해당하는 내용분기점 -->
-							<c:if test="${userLoginInfo.signupId =='관리자'}">
-								<li class="divider"></li>
-								<li><a href="/url/SignUp:Admin">관리자 페이지</a></li>
-							</c:if>
-							<!-- 관리자에 해당하는 내용분기점 -->
+							</ul>
+						</div>
+						<!--버튼 -->
 
-						</ul>
 					</div>
-
-
-
 				</div>
+
 
 				<ul class="nav nav-pills nav-stacked">
 
-					<li role="presentation"><a href="/url/bproduct:list">나의 달래</a></li>
+
 
 					<!-- 프로덕트 left 메뉴와 공통활용한다. -->
 					<%@include file="/WEB-INF/views/common/my-dallae_left-menu.jspf"%>

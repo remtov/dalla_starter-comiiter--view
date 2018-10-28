@@ -169,7 +169,7 @@ h1 {
 						} else {
 							logout();
 							location.href = "/url/SignUp:login";
-							alert('로그인이 완료되지않았다.');
+							alert('로그인에 실패하였습니다.');
 
 						}
 						;
