@@ -1,3 +1,4 @@
+<!-- 코드를 길게 썻을경우 메시지가 안뜨는 문제 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html>
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-	
+
 
 
 	<div class="view-container">
@@ -37,54 +38,54 @@
 								</tr>
 								<tr>
 									<td>제품이름 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="2,30" class="form-control" type="text"
 										name="productName" value="${product.productName}"></td>
 								</tr>
 								<tr>
 									<td>제품분류 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required class="form-control" type="text"
 										name="productCategory" value="${product.productCategory}"></td>
 								</tr>
 								<tr>
 									<td>제품코드 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="3,10" class="form-control" type="text"
 										name="productCode" value="${product.productCode}"></td>
 								</tr>
 								<tr>
 									<td>제품수량 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,1000" required class="form-control" type="text"
 										name="productQuantity" value="${product.productQuantity}"></td>
 								</tr>
 								<tr>
 									<td>제품시간 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required class="form-control" type="text"
 										name="productDate" value="${product.productDate}"></td>
 								</tr>
 								<tr>
 									<td>제품상태 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,30" class="form-control" type="text"
 										name="productCondition" value="${product.productCondition}"></td>
 								</tr>
 								<tr>
 									<td>브랜드명 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,20" class="form-control" type="text"
 										name="productBrand" value="${product.productBrand}"></td>
 								</tr>
 								<tr>
 									<td>시작가격 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,1000000000" class="form-control" type="text"
 										name="productLowestPrice"
 										value="${product.productLowestPrice}"></td>
 								</tr>
 								<tr>
 									<td>희망가격 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,1000000000" class="form-control" type="text"
 										name="productHopefulPrice"
 										value="${product.productHopefulPrice}"></td>
 								</tr>
 								<tr>
 									<td>기타사항 :</td>
-									<td><input class="form-control" type="text"
+									<td><input required data-vc="1,300" class="form-control" type="text"
 										name="productDesc" value="${product.productDesc}"></td>
 								</tr>
 								<tr>
@@ -103,9 +104,9 @@
 
 			</div>
 		</div>
-		<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
-	</div>
 
+	</div>
+	<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
 	<script>
 	function dele(dsa){
 		$.ajax({

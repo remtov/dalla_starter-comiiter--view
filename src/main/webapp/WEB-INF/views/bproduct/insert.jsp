@@ -114,7 +114,7 @@ h4 {
 									</div>
 
 									<div class="col-md-9">
-										<input type="text" class="form-control" id="productName"
+										<input required type="text" class="form-control" id="productName"
 											name="productName" placeholder="제품명을 입력해 주세요" data-vc="2,30">
 									</div>
 								</div>
@@ -188,13 +188,13 @@ h4 {
 											role="button" type="button" data-container="body"
 											data-toggle="popover" data-placement="right"
 											data-trigger="focus"
-											data-content="데이터 관리를 위한 코드를 영문과 숫자로 정해 주십시오.(20글자이하)">ⓘ</a>
+											data-content="데이터 관리를 위한 코드를 영문과 숫자로 정해 주십시오.(10글자이하)">ⓘ</a>
 									</div>
 
 
 
 									<div class="col-md-3">
-										<input type="text" class="form-control" id="productCode"
+										<input required type="text" class="form-control" id="productCode"
 											name="productCode" placeholder="제품코드" data-vc="3,10">
 									</div>
 								</div>
@@ -217,7 +217,7 @@ h4 {
 													<div style="margin-top: 10px; margin-left: 10px;">
 
 														<div class="filebox">
-															<label for="productImage">업로드-1</label> <input
+															<label for="productImage">업로드-1</label> <input required 
 																type="file" id="productImage" name="productImage">
 														</div>
 
@@ -311,7 +311,7 @@ h4 {
 											data-toggle="popover" data-placement="right"
 											data-trigger="focus"
 											data-content="판매하는 물건에 대한 설명을 완전하게 기재 하십시오. 
-											모바일 환경에서 잘 보이도록 간결한 형식을 유지 부탁 드립니다. (한글500글자 이내)">ⓘ</a>
+											모바일 환경에서 잘 보이도록 간결한 형식을 유지 부탁 드립니다. (300글자 이내)">ⓘ</a>
 									</div>
 
 									<div class="col-md-9">
@@ -329,7 +329,7 @@ h4 {
 									</div>
 
 									<div class="col-md-3">
-										<input type="number" class="form-control" id="productQuantity"
+										<input required type="number" class="form-control" id="productQuantity"
 											name="productQuantity" placeholder="판매 수량 (숫자)"
 											data-vc="1,1000" required>
 									</div>
@@ -344,7 +344,7 @@ h4 {
 									</div>
 
 									<div class="col-md-4">
-										<input type="number" class="form-control"
+										<input required type="number" class="form-control"
 											id="productLowestPrice" name="productLowestPrice"
 											placeholder="제품의 최저가" data-vc="1,1000000000">
 									</div>
@@ -352,7 +352,7 @@ h4 {
 										<p style="font-size: 2em; color: #D9E0DF;">~</p>
 									</div>
 									<div class="col-md-4">
-										<input type="number" class="form-control"
+										<input required type="number" class="form-control"
 											id="productHopefulPrice" name="productHopefulPrice"
 											placeholder="제품 희망가(즉시 구매가)" data-vc="1,1000000000">
 									</div>
@@ -368,7 +368,7 @@ h4 {
 									</div>
 
 									<div class="col-md-6">
-										<input class="form-control" type="text" id="productBrand"
+										<input required class="form-control" type="text" id="productBrand"
 											name="productBrand" placeholder="제품명의 브랜드" data-vc="1,20">
 									</div>
 								</div>
