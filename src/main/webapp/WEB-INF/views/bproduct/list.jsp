@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,83 +48,188 @@ window.addEventListener('load',function(){
 <body>
 
 
+
+
+
 	<c:set var="userid" value="${userLoginInfo.signupId}"></c:set>
 	<c:choose>
 		<c:when test="${userid=='관리자'||userid=='판매자'}">
 
-			<!-- 관리자만보이는영역 -->
+			<!-- 관리자, 판매자만 보이는 영역 -->
 
 			<!-- 회색바탕 -->
 			<div class="view-container">
 				<!-- 컨텐츠컨테이너 -->
 				<div class="container">
 					<!-- 2분할 -->
+
+					<!-- 좌측메뉴 -->
+
+
+
+					<!-- 우측컨텐츠 -->
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th>제품 번호</th>
+								<th>제품 명</th>
+								<th>제품 분류</th>
+								<th>제품 최저가</th>
+								<th>제품 희망가</th>
+								<th>제품 브랜드</th>
+								<th>제품 상태</th>
+							</tr>
+						</thead>
+						<tbody id="ATProductBody">
+
+						</tbody>
+					</table>
+
+
 					<div class="row">
-						<!-- 좌측메뉴 -->
-						<div class="col-md-2" style="background-color: #f6f6f6;">
-							<%@ include file="/WEB-INF/views/bproduct/product-left.jspf"%>
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new01.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas
+										d.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new02.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs
+										df.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new03.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new04.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbanail label</h3>
+									<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
+										fasdfasdf asd fa sdfas..</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
 						</div>
 
 
-						<!-- 우측컨텐츠 -->
-						<div class="col-md-10">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>제품 번호</th>
-										<th>제품 명</th>
-										<th>제품 분류</th>
-										<th>제품 최저가</th>
-										<th>제품 희망가</th>
-										<th>제품 브랜드</th>
-										<th>제품 상태</th>
-									</tr>
-								</thead>
-								<tbody id="ATProductBody">
 
-								</tbody>
-							</table>
+					</div>
 
+
+					<div class="row">
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new05.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas
+										d.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
 						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new06.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs
+										df.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new07.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbnail label</h3>
+									<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img src="/img/new08.jpg" alt="...">
+								<div class="caption">
+									<h3>Thumbanail label</h3>
+									<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
+										fasdfasdf asd fa sdfas..</p>
+									<p>
+										<a href="#" class="btn btn-primary" role="button">Button</a> <a
+											href="#" class="btn btn-default" role="button">Button</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+
+
 					</div>
-					<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
 
-
-
-					<div class="col-md-6">
-						<h3>경매 목록</h3>
-						<p>이곳에서 경매 목록을 관리하세요.</p>
-					</div>
-
-					<!-- 상단광고 -->
-					<div class="col-md-6">
-						<img style="margin-top: 20px;" class="pull-right"
-							src="http://www.koitt.com/data/file/right_banner/3547767421_JgukId0s_rb04.jpg">
-
-					</div>
-
-					<!-- 상단광고 -->
-
-
-
-
-					<div style="max-width: 700px;">
-
-						<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
-					</div>
-					<div class="pull-right">
-
-						<img src="http://www.koitt.com/img/m11_img01.png">
-					</div>
 
 				</div>
-
-
-				<!-- 우측컨텐츠 -->
 			</div>
 
 
-		
+
+
+			<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
+
+
+
+
+
+
 
 			<script>
  
@@ -201,3 +308,20 @@ window.addEventListener('load',function(){
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -37,18 +37,8 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-	
+
 <script src="<%=rootPath%>/resources/js/bootstrap.min.js"></script>
-
-
-
-<!-- dhtmlx 영역 -->
-<link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/resources/dhtmlx/fonts/font_roboto/roboto.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=rootPath%>/resources/dhtmlx/dhtmlx.css" />
-<script src="<%=rootPath%>/resources/dhtmlx/dhtmlx.js"></script>
-<!-- dhtmlx 영역 -->
 
 
 
@@ -130,23 +120,9 @@
 
 
 							<ul class="nav navbar-nav navbar-right">
-								<!-- <li><a href="/">오늘의 추천거래</a></li> -->
+
 								<li><a href="/url/bproduct:insert">경매 등록</a></li>
-								<!-- <li><a href="#">도움말 및 문의</a></li> -->
-
-
-
-								<li class="dropdown"><a href="#" class="dropdown-toggle"
-									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 달래<span class="caret"></span>
-								</a>
-									<ul class="dropdown-menu" role="menu">
-										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
-										<%@ include
-											file="/WEB-INF/views/common/my-dallae_left-menu.jspf"%>
-										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
-									</ul></li>
-
+								<li><a href="/url/bproduct:list">경매 보기</a></li>
 
 
 
@@ -167,6 +143,7 @@
 										<!-- 마이페이지역할에해당 -->
 
 										<li><a onclick="logout()">로그아웃</a></li>
+
 										<!-- 관리자에 해당하는 내용분기점 -->
 										<c:if test="${userLoginInfo.signupId =='관리자'}">
 											<li><a href="/url/SignUp:Admin">관리자 페이지</a></li>
@@ -175,22 +152,15 @@
 
 									</ul></li>
 
-								<!-- 종모양 -->
-								<li><a href="#"> <img class="head-menu_menu-img--h17"
-										src="/img/icon_bell.png"></a></li>
-								<!-- 종모양 -->
-
-								<!-- 쇼핑카트모양 -->
-
-								<li><a href="#"><img class="head-menu_menu-img--h17"
-										src="/img/icon_shopping_cart.png"></a></li>
-								<!-- 쇼핑카트모양 -->
 
 
 							</ul>
 
 							<!-- 여기까지 세션이있는사람에대한 화면내용 -->
 						</c:when>
+
+
+
 						<c:otherwise>
 
 
@@ -198,36 +168,14 @@
 							<!-- 여기는 세션이 없는 사람에대한 내용 -->
 							<ul class="nav navbar-nav navbar-right">
 								<!-- <li><a href="/url/bproduct:list">오늘의 추천거래</a></li> -->
-								<li><a href="/url/bproduct:list">경매 올리기</a></li>
-								<!-- <li><a href="#">도움말 및 문의</a></li> -->
+								<li><a href="/url/bproduct:insert">경매 올리기</a></li>
+								<li><a href="/url/bproduct:list">경매 보기</a></li>
 
-
-
-
-								<li class="dropdown"><a href="#" class="dropdown-toggle"
-									data-toggle="dropdown" role="button" aria-expanded="false">
-										나의 달래<span class="caret"></span>
-								</a>
-									<ul class="dropdown-menu" role="menu">
-										<!-- 프로덕트 left 메뉴와 공통활용한다. -->
-										<%@ include
-											file="/WEB-INF/views/common/my-dallae_left-menu.jspf"%>
-										<!-- 프로덕트 left 메뉴와 공통활용한다. -->									</ul></li>
 
 								<li><a href="/url/SignUp:login">로그인</a></li>
 
 								<li><a href="/url/SignUp:SignUp">가입</a></li>
 
-								<!-- 종모양 -->
-								<li><a href="#"> <img src="/img/icon_bell.png"
-										class="head-menu_menu-img--h17"></a></li>
-								<!-- 종모양 -->
-
-								<!-- 쇼핑카트모양 -->
-
-								<li><a href="#"><img src="/img/icon_shopping_cart.png"
-										class="head-menu_menu-img--h17"></a></li>
-								<!-- 쇼핑카트모양 -->
 
 
 							</ul>

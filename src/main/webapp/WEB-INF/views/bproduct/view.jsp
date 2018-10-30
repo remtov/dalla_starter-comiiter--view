@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2" style="background-color: #f6f6f6;">
-					<%@ include file="/WEB-INF/views/bproduct/product-left.jspf"%>
+					
 				</div>
 
 				<div class="col-md-10">

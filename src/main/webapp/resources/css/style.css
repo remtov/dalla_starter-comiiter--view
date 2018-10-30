@@ -179,51 +179,6 @@ body {
 }
 
 /* 관리자페이지 공통활용 */
-
-/* <!-- 롤오버드랍다운 css & script --> */
-.zeta-menu-bar {
-	background: grey;
-	display: inline-block;
-	width: 100%;
-}
-
-.zeta-menu {
-	margin: 0;
-	padding: 0;
-}
-
-.zeta-menu li {
-	float: left;
-	list-style: none;
-	position: relative;
-}
-
-.zeta-menu li:hover {
-	background: white;
-}
-
-.zeta-menu li:hover>a {
-	color: grey;
-}
-
-.zeta-menu a {
-	color: white;
-	display: block;
-	padding: 10px 20px;
-	text-decoration: none;
-}
-
-.zeta-menu ul {
-	background: #eee;
-	border: 1px solid silver;
-	display: none;
-	padding: 0;
-	position: absolute;
-	left: 0;
-	top: 100%;
-	width: 180px;
-}
-
 #left_img-profile--div {
 	padding-top: 10px;
 	width: 100px;
@@ -243,39 +198,6 @@ body {
 #left_img-profile--div>div {
 	margin-top: 10px;
 }
-
-.common_title-line {
-	width: 100%;
-	
-}
-
-.zeta-menu ul li {life
-	float: none;
-}
-
-.zeta-menu ul li:hover {
-	background: #ddd;
-}
-
-.zeta-menu ul li:hover a {
-	color: black;
-}
-
-.zeta-menu ul a {
-	color: black;
-}
-
-.zeta-menu ul ul {
-	left: 100%;
-	top: 0;
-}
-
-.zeta-menu ul ul li {
-	float: left;
-	margin-right: 10px;
-}
-
-/* <!-- 롤오버드랍다운 css & script --> */
 
 /* 샵은아이디선택자 */
 #navi {
