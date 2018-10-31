@@ -111,13 +111,8 @@ div {
 									</tbody>
 								</table>
 							</div>
-							<hr>
-							<div class="admin-main_grid-div--h400">인포1</div>
-							<div class="admin-main_grid-div--h300">인포2</div>
-							<div class="pull-right">
-
-								<img src="http://www.koitt.com/img/m11_img01.png">
-							</div>
+							
+							
 
 						</div>
 
