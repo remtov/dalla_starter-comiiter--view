@@ -1,6 +1,3 @@
-<!-- 수정할것: 프로덕트 즉시구매 컬럼 삭제 예정 --> 
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -260,7 +257,7 @@ h4 {
 								<div class="col-md-3">
 									<input required type="number" class="form-control"
 										id="productQuantity" name="productQuantity"
-										placeholder="판매 수량 (숫자)" data-vc="1,3" required>
+										placeholder="판매 수량 (숫자)" data-vc="1,1000" required>
 								</div>
 							</div>
 
@@ -275,7 +272,7 @@ h4 {
 								<div class="col-md-4">
 									<input required type="number" class="form-control"
 										id="productLowestPrice" name="productLowestPrice"
-										placeholder="제품의 최저가" data-vc="1,10">
+										placeholder="제품의 최저가" data-vc="1,1000000000">
 								</div>
 								<div class="col-md-1">
 									<p style="font-size: 2em; color: #D9E0DF;">~</p>
@@ -283,7 +280,7 @@ h4 {
 								<div class="col-md-4">
 									<input required type="number" class="form-control"
 										id="productHopefulPrice" name="productHopefulPrice"
-										placeholder="제품 희망가(즉시 구매가)" data-vc="1,10">
+										placeholder="제품 희망가(즉시 구매가)" data-vc="1,1000000000">
 								</div>
 							</div>
 

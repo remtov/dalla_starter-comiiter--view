@@ -21,17 +21,30 @@ window.addEventListener('load',function(){
 				res = JSON.parse(res);
 				var html = '';
 				
-			
 					for(var product of res) {
-						html += '<tr onclick="goPage('+product.productNumber+')">';
-						html += '<td>'+ product.productNumber+'</td>';
+						
+						html += '<div class="col-sm-6 col-md-3">';
+						html += '<div class="thumbnail">';
+						html += '<img style="width:100%;" alt="/img/icon-img.png" src="/resources/img/product/'+product.productImage+'" onclick="goPage('+product.productNumber+')">';
+						html += '<div class="caption">';
+															
+						html += '<h3>'+product.productName+'</h3>';
+						html += '<p>'+product.productDesc+'</p>';
+						html += '<p>시작가격:'+product.productLowestPrice+'</p>';
+						html += '<p>현재가격:'+product.productHopefulPrice+'</p>';
+						html += '<p><a href="#" class="btn btn-primary" role="button">Button</a></p>';
+						html += '</div></div></div>';
+						
+			
+						
+						/* html += '<td>'+ product.productNumber+'</td>';
 						html += '<td>'+ product.productName + '</td>';
 						html += '<td>'+ product.productCategory + '</td>';
 						html += '<td>'+ product.productLowestPrice + '</td>';
 						html += '<td>'+ product.productHopefulPrice + '</td>';
 						html += '<td>'+ product.productBrand + '</td>';
 						html += '<td>'+ product.productCondition + '</td>';
-						html += '</tr>';
+						html += '</tr>'; */
 					}
 					document.querySelector('#ATProductBody').insertAdjacentHTML('beforeend',html);
 			}
@@ -61,166 +74,13 @@ window.addEventListener('load',function(){
 			<div class="view-container">
 				<!-- 컨텐츠컨테이너 -->
 				<div class="container">
-					<!-- 2분할 -->
-
-					<!-- 좌측메뉴 -->
-
-
-
-					<!-- 우측컨텐츠 -->
-
-					<table class="table">
-						<thead>
-							<tr>
-								<th>제품 번호</th>
-								<th>제품 명</th>
-								<th>제품 분류</th>
-								<th>제품 최저가</th>
-								<th>제품 희망가</th>
-								<th>제품 브랜드</th>
-								<th>제품 상태</th>
-							</tr>
-						</thead>
-						<tbody id="ATProductBody">
-
-						</tbody>
-					</table>
-
 
 					<div class="row">
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new01.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas
-										d.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new02.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs
-										df.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new03.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new04.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbanail label</h3>
-									<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
-										fasdfasdf asd fa sdfas..</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-
-
+						
+						<div id="ATProductBody"></div>
 					</div>
-
-
-					<div class="row">
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new05.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>adsf sadfasdfa dfasdf asd fasdfasdf asdf asdfasdf sdfas
-										d.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new06.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>..asdfasdf asdf sdfadsdf asdfa sdf asdf asdfasdf asdfs
-										df.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new07.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbnail label</h3>
-									<p>..asdfasdfasdfa sdfasdf asdfasdfa sdfasf asdfasd f.</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="/img/new08.jpg" alt="...">
-								<div class="caption">
-									<h3>Thumbanail label</h3>
-									<p>.sdfasdfa sdfsd fasdfasdfasdfasdf asdfsdaf adsf asd
-										fasdfasdf asd fa sdfas..</p>
-									<p>
-										<a href="#" class="btn btn-primary" role="button">Button</a> <a
-											href="#" class="btn btn-default" role="button">Button</a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-
-
-					</div>
-
-
 				</div>
 			</div>
-
-
 
 
 			<%@ include file="/WEB-INF/views/bproduct/product-bottom.jspf"%>
@@ -239,47 +99,6 @@ window.addEventListener('load',function(){
 				location.href='/BProductInfo/'+num;
 			}
 			 
- 
- 
- 	var fileInput = document.querySelector('input[type="file"]');
-		var preview = document.getElementById('preview');
-
-		fileInput.addEventListener('change', function(e) {
-			var url = URL.createObjectURL(e.target.files[0]);
-			preview.setAttribute('src', url);
-		});
-		function imgvali() {
-			var img = document.querySelector('input[type="file"]');
-
-			img = img.value.substring(img.value.lastIndexOf('.') + 1);
-			if (img.toUpperCase() != 'JPG' && img.toUpperCase() != 'PNG') {
-				alert("jpg 나 png파일을 넣어주세요");
-				return false;
-			}
-			return true;
-		}
-
-		function insert() {
-			var form = document.querySelector('#myform');
-			var formData = new FormData(form);
-
-			if (valicheck()) {
-				if (imgvali()) {
-
-					$.ajax({
-						url : '/BProductInfo',
-						contentType : false,//헤더 지우기
-						processData : false,//쿼리스트링 형식으로 바꾸지 않기
-						data : formData,
-						type : 'POST',
-						success : function() {
-							location.href = '/url/bproduct:list';
-							alert('성공');
-						}
-					});
-				}
-			}
-		}
 </script>
 
 
