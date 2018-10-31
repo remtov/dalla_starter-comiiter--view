@@ -1,5 +1,5 @@
 <!-- 수정할것: 프로덕트 즉시구매 컬럼 삭제 예정 --> 
-
+작업중
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -274,7 +274,7 @@ h4 {
 
 								<div class="col-md-4">
 									<input required type="number" class="form-control"
-										id="productLowestPrice" name="productLowestPrice"
+	         									id="productLowestPrice" name="productLowestPrice"
 										placeholder="제품의 최저가" data-vc="1,10">
 								</div>
 								<div class="col-md-1">
@@ -302,9 +302,6 @@ h4 {
 										data-vc="1,20">
 								</div>
 							</div>
-
-
-
 
 
 
@@ -356,7 +353,6 @@ h4 {
 			<script>
 				var fileInput = document.querySelector('input[type="file"]');
 				var preview = document.getElementById('preview');
-
 				fileInput.addEventListener('change', function(e) {
 					var url = URL.createObjectURL(e.target.files[0]);
 					preview.setAttribute('src', url);
